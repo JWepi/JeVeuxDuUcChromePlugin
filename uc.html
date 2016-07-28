@@ -1,0 +1,60 @@
+<!doctype html>
+
+
+<html>
+  <head>
+    <title>Crappy Extension's Popup</title>
+    <style>
+      body {
+        font-family: Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        white-space: pre;
+        max-width: 400px;
+      }
+    </style>
+    <script src="js/uc.js"></script>
+    <script src="js/libs/jquery-2.1.4.min.js"></script>
+	<script type="application/javascript">
+	
+	var canplay = true;
+	
+	(function() {
+		document.onmousemove = handleMouseMove;
+		function handleMouseMove(event) {
+			MoiVeuxDuUC();
+		}
+	})();
+	
+	(function() {
+		document.onclick = handleMouseClic;
+		function handleMouseClic(event) {
+			MoiVeuxDuUC();
+		}
+	})();
+
+	function MoiVeuxDuUC()
+	{
+		if (canplay)
+		{
+			canplay = false;
+			
+			var audio = new Audio('Je veux du UC.mp3');
+			
+			audio.onended = function(){
+				canplay = true;
+			};
+			
+			audio.play();
+		}
+	}
+	
+	</script>
+  </head>
+  <body>
+    <div id="status">Moi je veux du uc !</div>
+    <img id="image-result" hidden>
+  </body>
+</html>
+

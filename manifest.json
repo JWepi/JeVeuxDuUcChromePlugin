@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Moi Je Veux Du Uc Chrome Plugin",
+  "description": "Cette extention est la preuve que tu veux du uc !!!",
+  "version": "1.0.3",
+
+  "browser_action": {
+    "default_icon": "uc.png",
+    "default_popup": "uc.html"
+  },
+  "content_scripts": [
+    {
+      "run_at":"document_idle",
+	  "matches": ["https://www.google.fr/*", "https://www.google.com/*"],
+	  "js": ["js/libs/jquery-2.1.4.min.js", "js/uc.js", "js/uc_scripts.js"]
+    }
+  ],
+  "permissions": [
+     "tabs", "http://*/*"
+  ]
+}
