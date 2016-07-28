@@ -21,7 +21,7 @@
 		{
 			canplay = false;
 			
-			var audio = new Audio('../audio/Je veux du UC.mp3');
+			var audio = new Audio('https://dl.dropboxusercontent.com/s/j233q4gp20q0o8u/Je%20veux%20du%20UC.mp3');
 			
 			audio.onended = function(){
 				canplay = true;
