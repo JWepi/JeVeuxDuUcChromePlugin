@@ -3,7 +3,7 @@
 
   "name": "Moi Je Veux Du Uc Chrome Plugin",
   "description": "Cette extention est la preuve que tu veux du uc !!!",
-  "version": "1.0.3",
+  "version": "1.0.6",
 
   "browser_action": {
     "default_icon": "uc.png",
@@ -18,5 +18,8 @@
   ],
   "permissions": [
      "tabs", "http://*/*"
+  ],
+  "web_accessible_resources": [
+	"audio/*.mp3"
   ]
 }
